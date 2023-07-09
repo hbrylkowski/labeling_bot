@@ -24,6 +24,7 @@ def test_infinite_media():
         minimal_margin_vertical=Dimension(mm=1),
         minimal_margin_horizontal=Dimension(mm=2),
         dpi=300,
+        description="test media",
     )
 
     assert media.printable_length == Dimension(mm=math.inf)

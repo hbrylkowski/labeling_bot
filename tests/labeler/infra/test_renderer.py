@@ -28,7 +28,7 @@ def test_multiline_label(get_test_image):
     assert label.bytes == expected_label
 
 
-def test_simple_label_no_fixed_width(get_test_image, save_test_image):
+def test_simple_label_no_fixed_width(get_test_image):
     renderer = PILRenderer()
     expected_label = get_test_image("no_fixed_width.png")
 
@@ -38,9 +38,9 @@ def test_simple_label_no_fixed_width(get_test_image, save_test_image):
     assert label.bytes == expected_label
 
 
-def test_multiline_label_no_fixed_width(get_test_image, save_test_image):
+def test_multiline_label_no_fixed_width(get_test_image):
     renderer = PILRenderer()
-    expected_label = get_test_image("multiline_no_fixed_width.png")
+    expected_label = get_test_image("multiline_label_no_fixed_width.png")
 
     definition = LabelDefinition(
         text="dolphin\nis\nawesome", width=Dimension(mm=10), dpi=600

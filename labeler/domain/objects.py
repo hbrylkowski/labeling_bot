@@ -108,6 +108,7 @@ class MediaDefinition(BaseModel):
     minimal_margin_vertical: Dimension
     minimal_margin_horizontal: Dimension
     dpi: int
+    description: str
 
     @property
     def printable_width(self) -> Dimension:
