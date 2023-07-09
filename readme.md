@@ -3,6 +3,10 @@
 This application is build to render and print labels sent to it via telegram, as well
 as provide info about printer status and other useful information.
 
+
+## Supported commands
+- `/media_info` - show info about currently installed media
+
 ### usage example
 You need to things:
 1. A telegram bot token, you can write to [@BotFather](https://t.me/BotFather) to get one
