@@ -6,6 +6,7 @@ as provide info about printer status and other useful information.
 
 ## Supported commands
 - `/media_info` - show info about currently installed media
+- `/simple_label` - print a simple label
 
 ### usage example
 You need to things:

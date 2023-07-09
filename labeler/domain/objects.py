@@ -107,16 +107,17 @@ class MediaDefinition(BaseModel):
     length: Dimension
     minimal_margin_vertical: Dimension
     minimal_margin_horizontal: Dimension
+    minimum_length: Dimension = Field(default_factory=lambda: Dimension(mm=5))
     dpi: int
     description: str
 
     @property
     def printable_width(self) -> Dimension:
-        return self.width - 2 * self.minimal_margin_horizontal
+        return self.width - 2 * self.minimal_margin_vertical
 
     @property
     def printable_length(self) -> Dimension:
-        return self.length - 2 * self.minimal_margin_vertical
+        return self.length - 2 * self.minimal_margin_horizontal
 
 
 class Label(BaseModel):

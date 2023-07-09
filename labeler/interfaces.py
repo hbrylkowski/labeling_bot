@@ -13,3 +13,7 @@ class Printer(abc.ABC):
     @abc.abstractmethod
     def get_installed_media(self) -> MediaDefinition:
         pass
+
+    @abc.abstractmethod
+    def print_label(self, label: Image):
+        pass
