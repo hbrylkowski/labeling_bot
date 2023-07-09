@@ -24,7 +24,7 @@ class E550W(Printer):
         self.snmp_port = 161
 
     def get_installed_media(self) -> MediaDefinition:
-        pass
+        return self.__get_printer_status()
 
     def __get_printer_status(self):
         raw_snmp_data = self.__get_snmp_status().asNumbers()

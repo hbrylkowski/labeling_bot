@@ -1,4 +1,4 @@
-from labeler.domain.objects import Label, LabelRequest, LabelDefinition
+from labeler.domain.objects import Label, LabelRequest, LabelDefinition, MediaDefinition
 from labeler.interfaces import Renderer, Printer
 
 
@@ -23,3 +23,6 @@ class Application:
         )
 
         self.renderer.render_label(label_definition)
+
+    def get_installed_media(self) -> MediaDefinition:
+        return self.printer.get_installed_media()
