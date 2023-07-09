@@ -1,7 +1,7 @@
 FROM python:3.11
 
 RUN mkdir /app
-COPY /labeler /app
+COPY / /app
 
 COPY pyproject.toml poetry.lock /app/
 

@@ -11,6 +11,7 @@ brother-ql = {git = "https://github.com/archetipo/brother_ql"}
 jinja2 = "^3.1.2"
 pillow = "^9.5.0"
 pysnmp = "^4.4.12"
+pyasn1 = "0.4.8"
 python-telegram-bot = "^20.3"
 fastapi = "^0.99.1"
 
