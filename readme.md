@@ -6,10 +6,12 @@ as provide info about printer status and other useful information.
 
 ## Supported commands
 - `/media_info` - show info about currently installed media
+![img.png](img.png)
 - `/simple_label` - print a simple label
+![img_1.png](img_1.png)
 
-### usage example
-You need to things:
+### Usage example
+You need three things:
 1. A telegram bot token, you can write to [@BotFather](https://t.me/BotFather) to get one
 2. A compatible printer
 3. docker installed on your system
