@@ -7,7 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-brother-ql = {git = "https://github.com/archetipo/brother_ql"}
+brother-ql = {git = "https://github.com/hbrylkowski/brother_ql"}
 jinja2 = "^3.1.2"
 pillow = "^9.5.0"
 pysnmp = "^4.4.12"

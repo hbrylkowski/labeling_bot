@@ -23,8 +23,11 @@ from labeler.interfaces import Printer
 from PIL import Image as PILImage
 
 PRINTABLE_WIDTH = {
-    12: Dimension.from_points(150, 360),
-    24: Dimension.from_points(320, 360),
+    6: Dimension.from_points(64, 360),
+    9: Dimension.from_points(100, 360),
+    12: Dimension.from_points(140, 360),
+    18: Dimension.from_points(224, 360),
+    24: Dimension.from_points(256, 360),
 }
 
 
@@ -47,7 +50,7 @@ class E550W(Printer):
             red=False,
             threshold=70,
             cut=True,
-            rotate=270,
+            rotate=90,
             compress=True,
             dpi_600=True,
             hq=True,
@@ -70,10 +73,10 @@ class E550W(Printer):
 
     def __media_width_to_type(self, height: int):
         metric_width = Dimension.from_points(height, 360)
-        if metric_width == Dimension.from_points(150, 360):
-            return "pt512"
-        else:
-            raise ValueError(f"Unsupported media width: {metric_width}")
+        for width, printable_width in PRINTABLE_WIDTH.items():
+            if printable_width == metric_width:
+                return f"pt5{width}"
+        raise ValueError(f"Unsupported media width: {metric_width}")
 
     def __get_printer_status(self):
         raw_snmp_data = self.__get_snmp_status().asNumbers()

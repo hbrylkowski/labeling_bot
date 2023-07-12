@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - PRINTER_IP=192.168.1.93
+      - TELEGRAM_TOKEN=6386069775:AAFOQL7lIsDe_5njXptfOwmHWEVo_yyVAi4
+    command:
+      - python
+      - labeler/adapter/telegram_bot.py
